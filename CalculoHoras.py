@@ -6,14 +6,14 @@ while True:
         print('Valor válido. Vamos prosseguir!')
         break
     except:
-        print('Valor invalido. Tenten Novamente')
+        print('Valor invalido. Tente Novamente')
         continue
 
 while True:
     horas_trabalhadas = input('Digite suas horas trabalhadas por dia: ')
 
     try:
-        horas_trabalhadas = float(horas_trabalhadas),
+        horas_trabalhadas = float(horas_trabalhadas)
         print('Valor válido. Vamos prosseguir!')
         break
     except:

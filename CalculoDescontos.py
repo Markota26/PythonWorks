@@ -1,22 +1,22 @@
 while True:
     valor_hora = input('Quanto você recebe por hora?: ')
-    if not valor_hora.isdecimal():
-        print('Valor invalido, tente novamente.')
-        continue
-    else:
+    if valor_hora.isdecimal():
         valor_hora = float(valor_hora)
         print('Valor válido.')
         break
-while True:
-    horas_trabalhadas = input('Quantas horas você trabalha por mês?: ')
-    if not horas_trabalhadas.isnumeric():
+    else:
         print('Valor invalido, tente novamente.')
         continue
-    else:
+
+while True:
+    horas_trabalhadas = input('Quantas horas você trabalha por mês?: ')
+    if horas_trabalhadas.isnumeric():
         horas_trabalhadas = int(horas_trabalhadas)
         print('Valor válido.')
         break
-  
+    else:
+        print('Valor invalido, tente novamente.')
+        continue
 
 salario_Bruto = valor_hora * horas_trabalhadas
 
@@ -33,4 +33,3 @@ print(f'Será descontado de seu salário referente ao Sindicato: R${valor_Sindic
 
 salario_Liquido = round((salario_Bruto - valor_IR - valor_INSS - valor_Sindicato), 2)
 print(f'Salario liquido mensal: R${salario_Liquido}')
-
